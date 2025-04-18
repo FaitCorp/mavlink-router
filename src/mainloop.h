@@ -33,7 +33,7 @@
 struct Configuration {
     std::string conf_file_name;        ///< CLI "conf-file" only!
     std::string conf_dir;              ///< CLI "conf-dir" only!
-    unsigned long tcp_port{5760};      ///< conf "TcpServerPort" or CLI "tcp-port"
+    unsigned long tcp_port;      ///< conf "TcpServerPort" or CLI "tcp-port"
     bool report_msg_statistics{false}; ///< conf "ReportStats" or CLI "report_msg_statistics"
     Log::Level debug_log_level{Log::Level::INFO}; ///< conf "DebugLogLevel" or CLI "debug-log-level"
     Log::Backend log_backend{Log::Backend::STDERR}; ///< CLI "syslog"

@@ -612,10 +612,6 @@ int main(int argc, char *argv[])
     Log::open(config.log_backend);
     log_info(PACKAGE " version %s", BUILD_VERSION);
 
-    // Build remaining config from config files and CLI parameters
-    if (parse_conf_files(config) < 0) {
-        goto close_log;
-    }
 
     if (parse_argv(argc, argv, config) != 2) {
         goto close_log;
